@@ -5,7 +5,8 @@ module.exports= (req,res) => {
         let collection = {};
         snapshot.forEach(doc=>{
             console.log(doc.id, '=>', doc.data());
-            collection[doc.id]=doc.data();
+            collection[name]=doc.id;
+            collection[data]=doc.data();
         })
         res.send(collection);
     });
