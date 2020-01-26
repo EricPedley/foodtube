@@ -21,5 +21,5 @@ function submit() {
 function addIngredient() {
     let num = document.getElementById("ingredients").childElementCount;
     console.log(num);
-    document.getElementById("ingredients").innerHTML+=`<input type = "text" id = "ingredient${num+1}">`
+    document.getElementById("ingredients").innerHTML+=`<input type = "text" id = "ingredient${num+1}"><br>`
 }
