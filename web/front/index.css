@@ -1,0 +1,10 @@
+body{
+    background-color: bisque;
+}
+
+#navbar{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
