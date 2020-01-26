@@ -1,7 +1,12 @@
 $(document).ready(function() {
-    $.push("http://localhost:3000/all-recipes",null,function(response) {
-        response.forEach(recipe=>{
-            $("#recipes").innerHTML+=recipe.name+":"+JSON.stringify(recipe.ingredients);
+    console.log("script ran");
+    $.get("http://localhost:3000/all-recipes",function(response) {
+        console.log(response);
+        response.forEach(doc=> {
+            document.getElementById("recipes").innerHTML+=doc.name+":"+JSON.stringify(doc.data);
         });
+        
+           
+        
     });
 });
