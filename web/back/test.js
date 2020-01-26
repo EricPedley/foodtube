@@ -12,6 +12,6 @@ let data = {
 let data2 = {
     query:"PB&J"
 };
-request.post('http://localhost:3000/list-recipes', {json:data2}, function(error,response,body) {
+request.post('http://localhost:3000/all-recipes', {json:data2}, function(error,response,body) {
     console.log(body);
 });

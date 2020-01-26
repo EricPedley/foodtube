@@ -1,6 +1,8 @@
-const listRecipes = require('./list-recipes');
+const queryRecipe = require('./query-recipe');
 const addRecipes = require('./add-recipes');
+const allRecipes = require('./all-recipes');
 module.exports = {
-  "list-recipes": listRecipes,
-  "add-recipes": addRecipes
+  "query-recipe": queryRecipe,
+  "add-recipes": addRecipes,
+  "all-recipes": allRecipes
 };
