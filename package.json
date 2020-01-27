@@ -13,7 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "node web/back/index.js",
-    "start":"web/back/index.js"
+    "start": "node web/back/index.js"
   },
   "repository": {
     "type": "git",
