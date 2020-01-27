@@ -7,6 +7,6 @@ app.use(cors());
 //app.post('/query-recipe', require('query-recipe'));
 app.get('/all-recipes', require('./all-recipes'));
 app.post('/add-recipes', require('./add-recipes'));
-app.listen(process.env.PORT || 5000);
+app.listen(3000);
 
 console.log("app started");
