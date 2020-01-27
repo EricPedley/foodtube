@@ -19,7 +19,19 @@ function submit() {
     );
 }
 function addIngredient() {
-    let num = document.getElementById("ingredients").childElementCount;
-    console.log(num);
-    document.getElementById("ingredients").innerHTML+=`<input type = "text" id = "ingredient${num+1}"><br>`
+    let ingredients = [];
+    Array.from(document.getElementById("ingredients").childNodes).forEach(element=> {
+        if(element.value) {
+            ingredients.push(element.value);
+        }
+    });
+    ingredients.push("");
+    let content="";
+    ingredients.forEach((ing,index)=> {
+        content+=`<input type = "text" id = "ingredient${index}" value = "${ing}"><br>`;
+    });
+    document.getElementById("ingredients").innerHTML=content;
+    // let num = document.getElementById("ingredients").childElementCount;
+    // console.log(num);
+    // document.getElementById("ingredients").innerHTML+=`<input type = "text" id = "ingredient${num+1}"><br>`
 }
