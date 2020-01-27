@@ -1,7 +1,6 @@
 let express=require('express');
 const cors = require('cors');
 var app = express();
-const endpoints = require('./endpoints');
 app.use(express.json({type:"*/*"}));
 app.use(express.static('../front'));
 app.use(cors());
