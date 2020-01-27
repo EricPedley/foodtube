@@ -5,9 +5,9 @@ const endpoints = require('./endpoints');
 app.use(express.json({type:"*/*"}));
 app.use(express.static('../front'));
 app.use(cors());
-//app.post('/query-recipe', endpoints['query-recipe']);
-app.get('/all-recipes', endpoints['all-recipes']);
-app.post('/add-recipes', endpoints['add-recipes']);
+//app.post('/query-recipe', require('query-recipe'));
+app.get('/all-recipes', require('./all-recipes'));
+app.post('/add-recipes', require('./add-recipes'));
 app.listen(3000);
 
 console.log("listening on port 3000");
