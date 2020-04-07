@@ -19,6 +19,7 @@ function submit() {
     );
 }
 function addIngredient() {
+    console.log("adding ingredient");
     let ingredients = [];
     Array.from(document.getElementById("ingredients").childNodes).forEach(element=> {
         if(element.value) {

@@ -1,9 +1,8 @@
-capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1)
-
+capitalize = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 $(document).ready(function() {
-    console.log("script ran");
-    $.get("http://localhost:3000/all-recipes",function(response) {
-        console.log(response);
+    let w = window.location.href;
+    $.get(w.substring(0,w.indexOf("/",w.indexOf("//")))+"all-recipes",function(response) {
+        //console.log(response);
         document.getElementById("recipes").innerHTML+= `<div class = "container">`
         response.forEach(doc=> {
             var recipeName = capitalize(doc.name);
